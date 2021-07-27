@@ -1,0 +1,34 @@
+
+ul.social-network{
+    list-style: none;
+    padding: 0%;
+}
+ul.social-network li{
+    display: inline;
+    margin: 0%;
+    padding: 0.5rem;
+}
+.fa{
+    font-size: 35pt;
+    padding: 10px;
+}
+
+.fa-facebook:hover{
+    background: -webkit-linear-gradient(rgb(34, 18, 255), rgb(6, 114, 255));
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.fa-instagram:hover{
+    background: -webkit-linear-gradient(rgb(214, 34, 124), rgb(243, 180, 7));
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+.fa-twitter:hover{
+    background: -webkit-linear-gradient(rgb(11, 91, 211), rgb(5, 240, 201));
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
