@@ -1,38 +1,49 @@
-<div class="align-center bg-dark ">
-    <div class="form">
-    <form class="row row-cols-lg g-3 p-2  align-items-center ghost transparence round">
+<div class="backimage">
+  <div class="align-center my-5 py-5 mx-2">
+    <div class="back">
+      <form class="row row-cols-lg g-3 p-2 m-0  align-items-center ghost transparence round">
         <div class="">
           <label class="visually-hidden " for="inlineFormInputGroupUseremail">Email</label>
           <div class="input-group ">
             <div class="input-group-text ghost transparence">
-                <i class="fas fa-at text-light"></i></div>
+              <i class="fas fa-at text-light"></i></div>
             <input type="text" class="form-control ghost" id="inlineFormInputGroupUseremail" placeholder="E-mail">
           </div>
         </div>
-      
-        <div class="">
-            <label for="inputPassword " class="visually-hidden ">Senha</label>
-            <div class="input-group ">
-                <div class="input-group-text transparence ghost">
-                    <i class="fas fa-key text-light"></i>
-                </div>
-                <input type="password" class="form-control ghost" id="inputPassword" placeholder="Senha">
-              </div>
-            </div>
 
-        <div class="text-light mx-4">
-          <div class="form-check">
-            <input class="form-check-input bg-dark" type="checkbox" id="inlineFormCheck">
-            <label class="form-check-label align-check" for="inlineFormCheck">
-              Lembrar minha senha
-            </label>
+        <div class="">
+          <label for="inputPassword " class="visually-hidden ">Senha</label>
+          <div class="input-group ">
+            <div class="input-group-text transparence ghost">
+              <i class="fas fa-key text-light"></i>
+            </div>
+            <input type="password" class="form-control ghost" id="inputPassword" placeholder="Senha">
           </div>
         </div>
-      
-        <div class="centro">
-          <button type="submit" class="btn ghost align-check ">Enviar</button>
+
+        <div>
+          <div class="text-light ms-4">
+            <div class="form-check textinho">
+              <input class="form-check-input bg-dark" type="checkbox" id="inlineFormCheck">
+              <label class="form-check-label " for="inlineFormCheck">
+                Lembrar minha senha
+              </label>
+            </div>
+          </div>
+
+          <div class="m-2">
+            <button type="submit" class="btn ghost ">Enviar</button>
+          </div>
         </div>
-  
+
+
+
+
+
       </form>
+      <p class="text-center text-light m-2 textinho">Não tem uma conta ? <a class=""
+          routerLink='/cadastrar'>Cadastre-se</a></p>
     </div>
+  </div>
+
 </div>
