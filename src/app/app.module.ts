@@ -1,3 +1,5 @@
+import { HttpClientModule} from '@angular/common/http';
+import { ModalModule} from 'ngx-bootstrap/modal'
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
@@ -21,6 +23,8 @@ import { OrderModule } from 'ngx-order-pipe';
   imports: [
     BrowserModule,
     AppRoutingModule,
+    HttpClientModule,
+    ModalModule.forRoot(),
     FormsModule,
     OrderModule,
   ],
