@@ -1,62 +1,84 @@
 <div class="backimage">
   <div class="desfoque round">
-  <div class="back ">
-    <form class="row row-cols-lg g-1 m-0 p-2 align-items-center ghost transparence round">
-      <div class="p-2">
-        <div class="">
-          <label class="py-1" for="inlineFormInputGroupUsername">Nome</label>
-          <div class="input-group ">
+    <div class="back ">
+      <form class="row row-cols-lg g-1 m-0 align-items-center ghost transparence textinho-medio round">
+        <div class="p-2">
+          <div class="">
+            <label class="py-1" for="inlineFormInputGroupUsername">Nome</label>
+            <div class="input-group ">
 
-            <input type="text" class="form-control ghost" id="inlineFormInputGroupUsername" placeholder="Nome">
-          </div>
-        </div>
-
-        <div class="">
-          <label class="py-1" for="inlineFormInputGroupUseremail">Email</label>
-          <div class="input-group ">
-            <input type="text" class="form-control ghost" id="inlineFormInputGroupUseremail" placeholder="E-mail">
-          </div>
-        </div>
-
-        <div class="">
-          <label class="py-1" for="inputPassword" >Senha</label>
-          <div class="input-group ">
-            <input type="password" class="form-control ghost" id="inputPassword" placeholder="Senha">
-          </div>
-        </div>
-
-        <div class="">
-          <label class="py-1" for="inputPassword">Confirmar Senha</label>
-          <div class="input-group ">
-            <input type="password" class="form-control ghost mb-1" id="inputPassword" placeholder="Senha">
-          </div>
-        </div>
-
-        <div class="text-light mx-1 py-2 mt-1 textinho">
-          <div class="form-check">
-            <input class="form-check-input bg-dark" type="checkbox" id="inlineFormCheck">
-            <label class="form-check-label align-check" for="inlineFormCheck">
-              Lembrar minha senha.
-            </label>
+              <input [(ngModel)]='usuario.nome' type="text" class="form-control ghost" id="inlineFormInputGroupUsername"
+                name="inlineFormInputGroupUsername" placeholder="Nome">
+            </div>
           </div>
 
-          <div class="form-check">
-            <input class="form-check-input bg-dark" type="checkbox" id="inlineFormCheck">
-            <label class="form-check-label " for="inlineFormCheck">
-              Li e concordo com os Termos de uso.
-            </label>
+          <div class="">
+            <label class="py-1" for="inlineFormInputGroupUseremail">Email</label>
+            <div class="input-group ">
+              <input [(ngModel)]='usuario.usuario' type="text" class="form-control ghost"
+                id="inlineFormInputGroupUseremail" name="inlineFormInputGroupUseremail" placeholder="E-mail">
+            </div>
           </div>
 
-        </div>
+          <div class="">
+            <label class="py-1" for="inputPassword">Senha</label>
+            <div class="input-group ">
+              <input (input)='confirmSenha($event)' type="password" class="form-control ghost" id="inputPassword"
+                name="inputPassword" placeholder="Senha">
+            </div>
+          </div>
+
+          <div class="">
+            <label class="py-1" for="inputPassword">Confirmar Senha</label>
+            <div class="input-group ">
+              <input [(ngModel)]='usuario.senha' type="password" class="form-control ghost mb-1" id="confirmPassword"
+                name="confirmPassword" placeholder="Senha">
+            </div>
+          </div>
+
+          <div class="">
+            <label class="py-1" for="inlineFormInputGroupUsername">Link da Imagem de Perfil</label>
+            <div class="input-group">
+              <input [(ngModel)]='usuario.foto' type="text" class="form-control ghost"
+                id="inlineFormInputGroupProfilePicture" name="inlineFormInputGroupProfilePicture"
+                placeholder="Insira o link aqui" >
+            </div>
+          </div>
+
+          <div class="text-light mx-1 py-2 mt-1 textinho">
+            <div class="form-check">
+              <input value="adm" (change)='tipoUser($event)' type="checkbox" class="form-check-input bg-dark"
+                id="inlineFormCheckAdm" name="inlineFormCheckAdm">
+              <label class="form-check-label align-check" for="inlineFormCheck">
+                Sou um administrador
+              </label>
+            </div>
+
+
+            <div class="form-check">
+              <input class="form-check-input bg-dark" type="checkbox" id="inlineFormCheckSavePassword" name="inlineFormCheckSavePassword">
+              <label class="form-check-label align-check" for="inlineFormCheck">
+                Lembrar minha senha.
+              </label>
+            </div>
+
+            <div class="form-check">
+              <input class="form-check-input bg-dark" type="checkbox" id="inlineFormCheckTOS" name="inlineFormCheckTOS">
+              <label class="form-check-label " for="inlineFormCheck">
+                Li e concordo com os Termos de uso.
+              </label>
+            </div>
+
+          </div>
           <div class="">
             <button type="submit" class="btn ghost" routerLink="/entrar">Cancelar</button>
-            <button type="submit" class="btn ghost" routerLink="">Cadastrar</button>
+            <button type="submit" class="btn ghost" (click)='cadastrar()'>Cadastrar</button>
           </div>
-        
-      </div>
+
+        </div>
 
 
-    </form>
+      </form>
+    </div>
   </div>
-</div>
 </div>
