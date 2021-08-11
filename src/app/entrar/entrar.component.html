@@ -7,7 +7,7 @@
           <div class="input-group ">
             <div class="input-group-text ghost transparence">
               <i class="fas fa-at text-light"></i></div>
-            <input type="text" class="form-control ghost" id="inlineFormInputGroupUseremail" placeholder="E-mail">
+            <input [(ngModel)]='usuarioLogin.usuario' type="text" class="form-control ghost" id="inlineFormInputGroupUseremail" name="usuario" placeholder="E-mail">
           </div>
         </div>
 
@@ -17,7 +17,7 @@
             <div class="input-group-text transparence ghost">
               <i class="fas fa-key text-light"></i>
             </div>
-            <input type="password" class="form-control ghost" id="inputPassword" placeholder="Senha">
+            <input [(ngModel)]='usuarioLogin.senha'  type="password" class="form-control ghost" id="inputPassword" name="senha" placeholder="Senha">
           </div>
         </div>
 
@@ -32,7 +32,7 @@
           </div>
 
           <div class="m-2">
-            <button type="submit" class="btn ghost ">Enviar</button>
+            <button type="submit" class="btn ghost" (click)='entrar()'>Entrar</button>
           </div>
         </div>
 
